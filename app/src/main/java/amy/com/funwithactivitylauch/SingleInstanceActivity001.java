@@ -1,21 +1,22 @@
 package amy.com.funwithactivitylauch;
 
 import android.content.Intent;
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class SingleInstanceActivity001 extends AppCompatActivity {
-    // Extra の キー
     public static final String MESSAGE = "message";
 
     TextView countTxView;
     TextView msgTxView;
-    int count = 0;
+    int count = 1;
     String message = "";
+
+    static final String KEY_MESSAGE = "key_message";
+    static final String KEY_PUSH_COUNT = "key_push_count";
 
 
     @Override
@@ -26,7 +27,7 @@ public class SingleInstanceActivity001 extends AppCompatActivity {
         msgTxView = (TextView) findViewById(R.id.message);
 
         getIntentData(getIntent());
-        setContent();
+
     }
 
     private void getIntentData(Intent intent, boolean debug) {
@@ -50,30 +51,41 @@ public class SingleInstanceActivity001 extends AppCompatActivity {
         this.finish();
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-    }
+//    @Override
+//    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+//        super.onSaveInstanceState(outState, outPersistentState);
+//
+//        outState.putInt(KEY_COUNT, count);
+//        outState.putString(KEY_MESSAGE, message);
+//    }
+//
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//        count = savedInstanceState.getInt(KEY_COUNT);
+//        message = savedInstanceState.getString(KEY_MESSAGE);
+//    }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         getIntentData(intent);
-        setContent();
+
+        count++;
+
         setIntent(intent);
 
-        getIntentData(getIntent(),true);
+        getIntentData(getIntent(), true);
 
     }
 
-    public void setContent() {
-        count++;
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContent();
+    }
 
+    public void setContent() {
         msgTxView.setText(message);
         countTxView.setText(String.valueOf(count));
 
