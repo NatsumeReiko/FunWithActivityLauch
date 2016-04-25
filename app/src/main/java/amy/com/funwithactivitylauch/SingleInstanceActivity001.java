@@ -18,6 +18,8 @@ public class SingleInstanceActivity001 extends AppCompatActivity {
     static final String KEY_MESSAGE = "key_message";
     static final String KEY_PUSH_COUNT = "key_push_count";
 
+    int testCount = 9;
+    int testCount0 = 19;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class SingleInstanceActivity001 extends AppCompatActivity {
         msgTxView = (TextView) findViewById(R.id.message);
 
         getIntentData(getIntent());
+
+        Log.d("abc", "data:" + formatCount(testCount, 2));
+        Log.d("abc", "data:" + formatCount(testCount0, 2));
 
     }
 
@@ -90,4 +95,13 @@ public class SingleInstanceActivity001 extends AppCompatActivity {
         countTxView.setText(String.valueOf(count));
 
     }
+
+    public static String formatCount(final int count, final int maxDigits) {
+        if (Math.pow(10, maxDigits) - 1 < count) {
+            return String.format("%1$,3d", (int)Math.pow(10, maxDigits) - 1);
+        } else {
+            return String.format("%1$,3d", count);
+        }
+    }
+
 }

@@ -17,8 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--android:excludeFromRecents="true"-->
-        <!--android:launchMode="singleTask"-->
         <activity
             android:name=".SingleInstanceActivity001"
             android:label="SingleInstanceActivity001"
@@ -26,9 +24,9 @@
             android:relinquishTaskIdentity="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="ActivityLaunch" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -40,7 +38,76 @@
                     android:path="/lunch/singleinstanceactivity001"
                     android:scheme="fun" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".TestActivity002"
+            android:label="TestActivity002">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="screen"
+                    android:path="/qa/detail"
+                    android:scheme="aaaaaaaaaaaa" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".DeepLinkingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="deeplinking"
+                    android:scheme="aaaaaaaaaaaa" />
+            </intent-filter>
+
+        </activity>
+
+        <service
+            android:name=".service.IntentService001"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <category android:name="android.intent.category.CATEGORY_BROWSABLE" />
+
+                <data
+                    android:host="aaaa1"
+                    android:scheme="serviceaaa" />
+            </intent-filter>
+
+            <intent-filter>
+            <action android:name="amy.com.funwithactivitylauch.service" />
+            </intent-filter>
+
+
+        </service>
+        <service
+            android:name=".service.Service001"
+            android:enabled="true"
+            android:exported="true">
+
+            <!--<intent-filter>-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<data-->
+            <!--android:host="screen"-->
+            <!--android:path="/qa/detail"-->
+            <!--android:scheme="service" />-->
+            <!--</intent-filter>-->
+
+            <!--<intent-filter>-->
+            <!--<action android:name="amy.com.funwithactivitylauch.service" />-->
+            <!--</intent-filter>-->
+
+        </service>
     </application>
 
 </manifest>
