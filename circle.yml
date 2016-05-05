@@ -4,8 +4,7 @@ general:
 
 machine:
   environment:
-    ANDROID_HOME: /usr/local/Android/sdk
-
+    ANDROID_HOME: /usr/local/android-sdk-linux
 
 dependencies:
   override:
