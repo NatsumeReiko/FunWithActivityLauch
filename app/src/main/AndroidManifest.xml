@@ -40,6 +40,126 @@
             </intent-filter>
 
         </activity>
+
+
+        <!--**************************************************-->
+
+
+        <activity
+            android:name=".test001.Test001_SingleInstance_Activity"
+            android:label="Test001SingleInstanceActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test001_SingleInstance_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test001.Test001_SingleTop_Activity"
+            android:label="Test001_SingleTop_Activity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test001_SingleTop_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test001.Test001_SingleTask_Activity"
+            android:label="Test001_SingleTask_Activity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test001_SingleTask_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test001.Test001_Standard_Activity"
+            android:label="Test001_Standard_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test001_Standard_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <!--<activity-->
+            <!--android:name=".test001.Test001_Base_Activity"-->
+            <!--android:label="Test001_Base_Activity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="ActivityLaunch" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW" />-->
+
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+                <!--<data-->
+                    <!--android:host="activity"-->
+                    <!--android:path="/lunch/Test001_Base_Activity"-->
+                    <!--android:scheme="fun" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+
+        <!--**************************************************-->
+
         <activity
             android:name=".TestActivity002"
             android:label="TestActivity002">
@@ -57,10 +177,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:launchMode="singleInstance"
-            android:name=".DeepLinkingActivity">
+            android:name=".DeepLinkingActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -85,7 +206,7 @@
             </intent-filter>
 
             <intent-filter>
-            <action android:name="amy.com.funwithactivitylauch.service" />
+                <action android:name="amy.com.funwithactivitylauch.service" />
             </intent-filter>
 
 
