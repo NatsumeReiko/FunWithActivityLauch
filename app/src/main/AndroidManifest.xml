@@ -136,9 +136,58 @@
         </activity>
 
 
+        <activity
+            android:name=".test002.Test002_Child_Activity_001"
+            android:parentActivityName=".test002.Test002_Parent_Activity_001"
+            android:label="Test002_Child_Activity_001">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".test002.Test002_Parent_Activity_001" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test002_Child_Activity_001"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test002.Test002_Parent_Activity_001"
+            android:label="Test002_Parent_Activity_001">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test002_Parent_Activity_001"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
         <!--<activity-->
-            <!--android:name=".test001.Test001_Base_Activity"-->
-            <!--android:label="Test001_Base_Activity">-->
+            <!--android:name=".test001.Five_Option_Base_Activity"-->
+            <!--android:label="Five_Option_Base_Activity">-->
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
@@ -152,7 +201,7 @@
 
                 <!--<data-->
                     <!--android:host="activity"-->
-                    <!--android:path="/lunch/Test001_Base_Activity"-->
+                    <!--android:path="/lunch/Five_Option_Base_Activity"-->
                     <!--android:scheme="fun" />-->
             <!--</intent-filter>-->
         <!--</activity>-->

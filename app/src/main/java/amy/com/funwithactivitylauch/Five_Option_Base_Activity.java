@@ -1,10 +1,13 @@
-package amy.com.funwithactivitylauch.test001;
+package amy.com.funwithactivitylauch;
 
 import android.content.Intent;
 
-import amy.com.funwithactivitylauch.FiveOptionBaseActivity;
+import amy.com.funwithactivitylauch.test001.Test001_SingleInstance_Activity;
+import amy.com.funwithactivitylauch.test001.Test001_SingleTask_Activity;
+import amy.com.funwithactivitylauch.test001.Test001_SingleTop_Activity;
+import amy.com.funwithactivitylauch.test001.Test001_Standard_Activity;
 
-public class Test001_Base_Activity extends FiveOptionBaseActivity {
+public class Five_Option_Base_Activity extends FiveOptionBaseActivity {
 
 
     @Override
