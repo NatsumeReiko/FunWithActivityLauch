@@ -6,6 +6,7 @@ import amy.com.funwithactivitylauch.test001.Test001_SingleInstance_Activity;
 import amy.com.funwithactivitylauch.test001.Test001_SingleTask_Activity;
 import amy.com.funwithactivitylauch.test001.Test001_SingleTop_Activity;
 import amy.com.funwithactivitylauch.test001.Test001_Standard_Activity;
+import amy.com.funwithactivitylauch.util.Constant;
 
 public class Five_Option_Base_Activity extends FiveOptionBaseActivity {
 
@@ -21,24 +22,33 @@ public class Five_Option_Base_Activity extends FiveOptionBaseActivity {
 
     @Override
     public void optionSelected(int optionId) {
+        Intent intent = null;
         switch (optionId) {
             case OPITON_01: {
-                startActivity(new Intent(this, Test001_Standard_Activity.class));
+                intent = new Intent(this, Test001_Standard_Activity.class);
             }
             break;
             case OPITON_02: {
-                startActivity(new Intent(this, Test001_SingleTop_Activity.class));
+                intent = new Intent(this, Test001_SingleTop_Activity.class);
             }
             break;
             case OPITON_03: {
-                startActivity(new Intent(this, Test001_SingleTask_Activity.class));
+                intent = new Intent(this, Test001_SingleTask_Activity.class);
 
             }
             break;
             case OPITON_04: {
-                startActivity(new Intent(this, Test001_SingleInstance_Activity.class));
+                intent = new Intent(this, Test001_SingleInstance_Activity.class);
             }
             break;
+        }
+
+        if (intent != null) {
+            if (Constant.DO_NEW_TASK) {
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            }
+
+            startActivity(intent);
         }
 
 

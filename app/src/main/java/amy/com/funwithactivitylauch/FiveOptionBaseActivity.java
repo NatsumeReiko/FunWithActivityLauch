@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import amy.com.funwithactivitylauch.util.Constant;
+
 public abstract class FiveOptionBaseActivity extends AppCompatActivity
         implements View.OnClickListener {
+
     final protected int OPITON_01 = 1;
     final protected int OPITON_02 = 2;
     final protected int OPITON_03 = 3;
@@ -23,6 +26,11 @@ public abstract class FiveOptionBaseActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.panel_five_option);
+
+        Constant.DO_NEW_TASK = false;
+
+//        newTaskFlag = getIntent().getBooleanExtra(Constant.NEW_TASK_FLAG, false);
+
         optionTxt01 = (TextView) findViewById(R.id.option01);
         optionTxt02 = (TextView) findViewById(R.id.option02);
         optionTxt03 = (TextView) findViewById(R.id.option03);
@@ -74,6 +82,6 @@ public abstract class FiveOptionBaseActivity extends AppCompatActivity
             }
             break;
         }
-
     }
+
 }

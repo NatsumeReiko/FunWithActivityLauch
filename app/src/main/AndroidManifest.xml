@@ -157,11 +157,127 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".test003_affinity.Test003_Ten_Option_No_New_Activity"
+            android:label="Test003_Ten_Option_No_New_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test003_Ten_Option_No_New_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test003_affinity.Test003_Ten_Option_New_Activity"
+            android:label="Test003_Ten_Option_New_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test003_Ten_Option_New_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test004_flag.Test004_flag_Activity"
+            android:label="Test004_flag_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="ActivityLaunch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="activity"
+                    android:path="/lunch/Test004_flag_Activity"
+                    android:scheme="fun" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".test003_affinity.Test003_SingleInstance_Group001_Activity"
+            android:allowTaskReparenting="true"
+            android:label="Test003_SingleInstance_Group001_Activity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="@string/task_affinity_001" />
+
+        <activity
+            android:name=".test003_affinity.Test003_SingleInstance_Group002_Activity"
+            android:allowTaskReparenting="true"
+            android:label="Test003_SingleInstance_Group002_Activity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="@string/task_affinity_002" />
+
+        <activity
+            android:name=".test003_affinity.Test003_SingleTask_Group001_Activity"
+            android:label="Test003_SingleTask_Group001_Activity"
+            android:launchMode="singleTask"
+            android:taskAffinity="@string/task_affinity_001" />
+
+        <activity
+            android:name=".test003_affinity.Test003_SingleTask_Group002_Activity"
+            android:label="Test003_SingleTask_Group001_Activity"
+            android:launchMode="singleTask"
+            android:taskAffinity="@string/task_affinity_002" />
+
+
+        <activity
+            android:name=".test003_affinity.Test003_SingleTop_Group001_Activity"
+            android:label="Test003_SingleTop_Group001_Activity"
+            android:launchMode="singleTop"
+            android:taskAffinity="@string/task_affinity_001" />
+
+        <activity
+            android:name=".test003_affinity.Test003_SingleTop_Group002_Activity"
+            android:label="Test003_SingleTop_Group002_Activity"
+            android:launchMode="singleTop"
+            android:taskAffinity="@string/task_affinity_002" />
+
+
+        <activity
+            android:name=".test003_affinity.Test003_Standard_Group001_Activity"
+            android:label="Test003_Standard_Group001_Activity"
+            android:taskAffinity="@string/task_affinity_001" />
+
+        <activity
+            android:name=".test003_affinity.Test003_Standard_Group002_Activity"
+            android:label="Test003_Standard_Group002_Activity"
+            android:taskAffinity="@string/task_affinity_002" />
+
 
         <activity
             android:name=".test002.Test002_Child_Activity_001"
-            android:parentActivityName=".test002.Test002_Parent_Activity_001"
-            android:label="Test002_Child_Activity_001">
+            android:label="Test002_Child_Activity_001"
+            android:parentActivityName=".test002.Test002_Parent_Activity_001">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".test002.Test002_Parent_Activity_001" />
@@ -208,24 +324,24 @@
 
 
         <!--<activity-->
-            <!--android:name=".test001.Five_Option_Base_Activity"-->
-            <!--android:label="Five_Option_Base_Activity">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--android:name=".test001.Five_Option_Base_Activity"-->
+        <!--android:label="Five_Option_Base_Activity">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="ActivityLaunch" />-->
-            <!--</intent-filter>-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.VIEW" />-->
+        <!--<category android:name="ActivityLaunch" />-->
+        <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.VIEW" />-->
 
-                <!--<category android:name="android.intent.category.DEFAULT" />-->
-                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="android.intent.category.BROWSABLE" />-->
 
-                <!--<data-->
-                    <!--android:host="activity"-->
-                    <!--android:path="/lunch/Five_Option_Base_Activity"-->
-                    <!--android:scheme="fun" />-->
-            <!--</intent-filter>-->
+        <!--<data-->
+        <!--android:host="activity"-->
+        <!--android:path="/lunch/Five_Option_Base_Activity"-->
+        <!--android:scheme="fun" />-->
+        <!--</intent-filter>-->
         <!--</activity>-->
 
 

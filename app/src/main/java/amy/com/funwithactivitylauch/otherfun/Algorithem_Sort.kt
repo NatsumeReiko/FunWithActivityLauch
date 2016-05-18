@@ -5,7 +5,7 @@ import android.util.Log
 /**
  * Created by ms2 on 2016/05/17.
  */
-object Algorithem_Buble_Sort {
+object Algorithem_Sort {
 
     fun sort001() {
         val dataBefore = intArrayOf(3, 7, 8, 34, 66, 54, 757, 3, 2, 1, 646)
