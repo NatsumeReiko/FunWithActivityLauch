@@ -8,9 +8,9 @@ public class Five_Option_Algorithem_Activity extends FiveOptionBaseActivity {
     @Override
     public void setOptionTitle() {
         optionTxt01.setText("Bulb_Sort_Java_sort001");
-        optionTxt02.setText("Selcetion_Sort_Java_sort001");
-        optionTxt03.setText("Selcetion_Sort_Java_sort002");
-//        optionTxt04.setText("go to singleInstance");
+        optionTxt02.setText("quicksort_sort_001");
+//        optionTxt03.setText("Selcetion_Sort_Java_sort002");
+        optionTxt04.setText("makeUri");
 
     }
 
@@ -22,15 +22,15 @@ public class Five_Option_Algorithem_Activity extends FiveOptionBaseActivity {
             }
             break;
             case OPITON_02: {
-                Algorithm_Sort_Java.selection_sort_001();
+                Algorithm_Sort_Java.quicksort_sort_001();
             }
             break;
             case OPITON_03: {
-                Algorithm_Sort_Java.selection_sort_002();
 
             }
             break;
             case OPITON_04: {
+                Test_Uri.makeUri();
             }
             break;
         }
